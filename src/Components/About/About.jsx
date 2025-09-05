@@ -8,7 +8,7 @@ import logo3 from '../../assets/Rectangle70.png'
 
 export default function About() {
   return (
-    <div className={`container`}>
+    <div className=''>
         <div className={style.about}>
             <img src={logo} alt="" />
             <p><h1>Blog</h1><br /><span>Home</span> <i class="fa-solid fa-angle-right"></i> Blog</p>

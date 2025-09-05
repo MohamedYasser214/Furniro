@@ -13,7 +13,7 @@ export default function Home() {
   const [visibleCount, setVisibleCount] = React.useState(4);
 
   return (
-    <div className="container   text-black">
+    <div className=" text-black">
 
       <div className={styles.logo}>
         <div className={styles.box}>

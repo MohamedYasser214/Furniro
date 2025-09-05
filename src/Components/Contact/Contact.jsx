@@ -4,7 +4,6 @@ import style from './Contact.module.css'
 export default function Contact() {
   return (
     <div className="mx-auto" >
-      {/* العنوان */}
       <div className={`${style.contact} px-4 sm:px-6 md:px-10 lg:px-20 text-center`}>
         <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-3">
           Get In Touch With Us
@@ -15,10 +14,8 @@ export default function Contact() {
         </p>
       </div>
 
-      {/* main items */}
       <div className={`${style.items} flex flex-col md:flex-row gap-8 md:gap-10 lg:gap-16 px-4 sm:px-6 md:px-10 lg:px-20 mt-8`}>
 
-        {/* left side */}
         <div className="md:w-1/2 w-full flex flex-col gap-6">
           <div className={style.left_item}>
             <i className="fa-solid fa-location-dot text-blue-600"></i>
@@ -47,7 +44,6 @@ export default function Contact() {
           </div>
         </div>
 
-        {/* right side */}
         <div className={`${style.right} md:w-1/2 w-full`}>
           <div className="mb-5">
             <label htmlFor="text" className="block mb-2 text-sm font-medium text-gray-900">
@@ -95,7 +91,6 @@ export default function Contact() {
         </div>
       </div>
 
-      {/* button */}
       <div className={`${style.btt} text-center mt-8`}>
         <button className="bg-blue-600 text-white px-6 py-2 sm:px-8 sm:py-3 rounded-lg hover:bg-blue-700 transition text-sm sm:text-base">
           Submit
