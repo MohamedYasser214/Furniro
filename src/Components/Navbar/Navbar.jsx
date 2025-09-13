@@ -3,7 +3,6 @@ import logo from "../../assets/Capture.PNG";
 import { Link } from "react-router-dom";
 import { useCart } from "../../context/CartContext";
 import { useFavorites } from "../../context/FavoritesContext";
-import Search from "./../Search/Search";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,8 +10,9 @@ export default function Navbar() {
   const { favorites } = useFavorites();
 
   return (
-    <nav className="bg-white fixed w-full z-20 top-0 start-0 border-b border-gray-200 shadow-sm">
+    <nav className="bg-white fixed w-full z-30 top-0 start-0 border-b border-gray-200 shadow-sm">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-4 py-3">
+        {/* Logo */}
         <Link to="/" className="flex items-center space-x-3">
           <img src={logo} className="h-8 sm:h-10" alt="Logo" />
           <span className="self-center font-bold text-xl sm:text-2xl">
@@ -20,19 +20,24 @@ export default function Navbar() {
           </span>
         </Link>
 
+        {/* Icons + Toggle */}
         <div className="flex items-center space-x-4 md:order-2">
           <ul className="flex items-center gap-4 sm:gap-6">
+            {/* User */}
             <li>
               <Link to="/register">
                 <i className="text-black fa-solid fa-user cursor-pointer"></i>
               </Link>
             </li>
+
+            {/* Search */}
             <li>
               <Link to="/search">
                 <i className="text-black fa-solid fa-magnifying-glass cursor-pointer"></i>
               </Link>
             </li>
 
+            {/* Favorites */}
             <li className="relative">
               <Link to="/favorites">
                 <i className="text-black fa-regular fa-heart cursor-pointer"></i>
@@ -44,6 +49,7 @@ export default function Navbar() {
               </Link>
             </li>
 
+            {/* Cart */}
             <li className="relative">
               <Link to="/cart">
                 <i className="text-black fa-solid fa-cart-shopping cursor-pointer"></i>
@@ -56,6 +62,7 @@ export default function Navbar() {
             </li>
           </ul>
 
+          {/* Mobile Toggle */}
           <button
             onClick={() => setIsOpen(!isOpen)}
             type="button"
@@ -69,6 +76,7 @@ export default function Navbar() {
           </button>
         </div>
 
+        {/* Links */}
         <div
           className={`${
             isOpen ? "block" : "hidden"

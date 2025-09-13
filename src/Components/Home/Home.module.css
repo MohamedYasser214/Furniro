@@ -1,52 +1,72 @@
-.logo{
-    background-image: url("../../assets/Frame.png");
-    background-position: center center;
-    background-size: cover;
-    width: 100%;
-    height: 100vh;
-    position: relative;
+.logo {
+  background-image: url("../../assets/Frame.png");
+  background-position: center center;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  position: relative;
 }
-.box{
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    width: 643px;
-    height: 445.98px;
-    background-color: #FFF3E3;
-    padding: 15px;
-    opacity: 0.8;
+
+.box {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #FFF3E3;
+  padding: 20px;
+  opacity: 0.9;
+  border-radius: 8px;
 }
-.box span{
-    letter-spacing: 2px;
-    font-size: 24.16px;
+
+.box span {
+  letter-spacing: 2px;
+  font-size: 16px;
 }
-.box h1{
-    color: #B88E2F;
-    font-weight: bold;
-    font-size: 52px;
+
+.box h1 {
+  color: #B88E2F;
+  font-weight: bold;
+  font-size: 24px;
 }
+
 .box p {
-    width: 546px;
+  font-size: 14px;
+  margin-top: 10px;
+  line-height: 1.5;
+}
+
+.box button {
+  margin-top: 20px;
+  padding: 12px 20px;
+  background-color: #B88E2F;
+  font-weight: bold;
+  color: white;
+  border-radius: 6px;
+}
+
+@media (min-width: 768px) {
+  .box h1 {
+    font-size: 36px;
+  }
+  .box p {
+    font-size: 16px;
+  }
+  .box span {
     font-size: 18px;
-    height: 52.35px;
+  }
 }
-.box button{
-    margin: 50px;
-    margin-left: 50px;
-    padding: 30px;
-    background-color: #B88E2F;
-    width: 333px;
-    font-weight: bold;
-    height: 74px;
-}
-.browse h1{
-    font-size: 32px;
-}
-.browse p{
+
+@media (min-width: 1024px) {
+  .box {
+    width: 600px;
+  }
+  .box h1 {
+    font-size: 48px;
+  }
+  .box p {
+    font-size: 18px;
+  }
+  .box span {
     font-size: 20px;
-    
-}
-.left_caption h1{
-    font-size: 40px;
-    font-weight: bold;
+  }
 }

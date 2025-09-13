@@ -1,59 +1,44 @@
-.contact{
-    margin-top: 90px;
-    text-align: center;
+.contact {
+  margin-top: 90px;
+  text-align: center;
 }
 .contact h1 {
-    font-size: 36px;
-    font-weight: 600;
+  font-size: 36px;
+  font-weight: 600;
 }
-.contact p{
-    width: 40%;
-    padding: 10px 0;
-    font-size: 16px;
-    color: #9F9F9F;
-    margin: auto;
+.contact p {
+  width: 100%;
+  max-width: 600px;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #9F9F9F;
+  margin: auto;
 }
-.items{
-    display: flex;
-    width: 100%;
-    
+.items {
+  display: flex;
+  width: 100%;
 }
-.items i{
-    font-size: 24px;
+.items i {
+  font-size: 24px;
 }
-.items span{
-    font-size: 24px;
+.items span {
+  font-size: 20px;
 }
-.left_item{
-    /* background-color: tan; */
-    width: 100%;
-    padding: 10px 30px;
+.left_item {
+  width: 100%;
+  padding: 10px 20px;
 }
-.right{
-    /* background-color: tomato; */
-    width: 100%;
-    padding-left: 120px;
-    padding-top: 30px;
+.right {
+  width: 100%;
+  padding-top: 20px;
 }
-.right input{
-    width: 528.75px;
-    height: 50px;
-    padding: 10px;
-    border: 1px solid black;
+.btt {
+  text-align: center;
+  margin: 20px 0px;
 }
-.right textarea{
-    width: 527px;
-    height: 120px;
-    padding: 10px;
-    border: 1px solid black;
-}
-.btt{
-    text-align: center;
-    margin: 20px 0px;
-}
-.btt button{
-    background-color: #B88E2F;
-    width: 237px;
-    height: 55px;
-    color: white;
+.btt button {
+  background-color: #B88E2F;
+  width: 237px;
+  height: 55px;
+  color: white;
 }

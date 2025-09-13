@@ -21,24 +21,38 @@ export default function Shop() {
     <>
       <Navbar />
       <div className="shop w-full">
-        <div className="w-full relative">
-          <img src={logo1} className="w-full h-40 sm:h-56 md:h-64 object-cover" alt="" />
-          <div className={`${style.text_shop} absolute top-1/2 left-4 sm:left-10 transform -translate-y-1/2`}>
-            <h1 className="text-xl sm:text-2xl md:text-3xl font-bold">Shop</h1>
-            <p className="text-sm sm:text-base">
-              Home <i className="fa-solid fa-chevron-right"></i>{" "}
-              <span>Shop</span>
-            </p>
-          </div>
-        </div>
+        {/* Banner */}
+<div className="w-full relative">
+  <img
+    src={logo1}
+    className="w-full h-48 sm:h-56 md:h-72 lg:h-80 object-cover object-center mt-12 sm:mt-0"
+    alt="Shop Banner"
+  />
+  <div
+    className={`${style.text_shop} absolute inset-0 flex flex-col items-center justify-center text-center`}
+  >
+    <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold">
+      Shop
+    </h1>
+    <p className="text-sm sm:text-base md:text-lg">
+      Home <i className="fa-solid fa-chevron-right"></i>{" "}
+      <span className="font-medium">Shop</span>
+    </p>
+  </div>
+</div>
 
 
-        <div style={{backgroundColor:'#F9F1E7'}} className="py-5 w-full px-4 sm:px-8 md:px-12">
+
+        {/* Filter Bar */}
+        <div
+          style={{ backgroundColor: "#F9F1E7" }}
+          className="py-4 w-full px-4 sm:px-8 md:px-12"
+        >
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
-            <p className="flex items-center gap-2">
+            <p className="flex items-center gap-2 text-sm sm:text-base">
               <i className="fa-solid fa-filter"></i> Filter
             </p>
-            <p className="flex gap-3 text-lg">
+            <p className="flex gap-3 text-base sm:text-lg">
               <i className="fa-solid fa-cubes"></i>
               <i className="fa-solid fa-list"></i>
               <i className="fa-solid fa-grip-lines-vertical"></i>
@@ -48,17 +62,19 @@ export default function Shop() {
                 ? "Loading..."
                 : error
                 ? "Failed to load."
-                : `Showing ${Math.min(indexOfFirst + 1, products.length)}–${Math.min(
-                    indexOfLast,
+                : `Showing ${Math.min(
+                    indexOfFirst + 1,
                     products.length
-                  )} of ${products.length} results`}
+                  )}–${Math.min(indexOfLast, products.length)} of ${
+                    products.length
+                  } results`}
             </p>
           </div>
         </div>
 
-        {/* المنتجات */}
+        {/* Products */}
         <div className="px-3 sm:px-6 md:px-12 lg:px-20 mt-10">
-          <h1 className="text-center text-2xl sm:text-3xl font-bold mb-6">
+          <h1 className="text-center text-xl sm:text-2xl md:text-3xl font-bold mb-6">
             Furniture Shop
           </h1>
 
@@ -91,7 +107,6 @@ export default function Shop() {
                     )}
                   </Link>
 
-
                   <div className="flex items-center justify-between mt-3">
                     <div>
                       <h3 className="font-semibold text-sm sm:text-base line-clamp-2">
@@ -101,7 +116,6 @@ export default function Shop() {
                         ${Number(p.price).toFixed(2)}
                       </p>
                     </div>
-
 
                     <i
                       onClick={() => toggleFavorite(p)}
@@ -118,14 +132,16 @@ export default function Shop() {
             </div>
           )}
 
-
+          {/* Pagination */}
           {!loading && !error && products.length > itemsPerPage && (
             <div className="flex justify-center mt-8 flex-wrap gap-2">
               {Array.from({ length: totalPages }, (_, i) => (
                 <button
                   key={i}
                   onClick={() => setCurrentPage(i + 1)}
-                  style={{ backgroundColor: currentPage === i + 1 ? "#B88E2F" : "" }}
+                  style={{
+                    backgroundColor: currentPage === i + 1 ? "#B88E2F" : "",
+                  }}
                   className={`px-3 sm:px-4 py-2 rounded text-sm sm:text-base ${
                     currentPage === i + 1
                       ? "text-white"
